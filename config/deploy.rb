@@ -1,12 +1,12 @@
 set :application, "gtfs-stops"
-set :repository,  "set your repository location here"
+set :repository,  "git://github.com/umts/opengtfs-stopinfo.git"
 
 set :scm, :git
 
 role :web, "dieselnet.admin.umass.edu"                          # Your HTTP server, Apache/etc
 role :app, "dieselnet.admin.umass.edu"                          # This may be the same as your `Web` server
 
-set :deploy_to, "/srv/stop-info"
+set :deploy_to, "/srv/#{application}"
 set :deploy_via, :export
 
 set :server_user, "apache"
@@ -66,7 +66,7 @@ define( 'LOG_DB_PASSWORD', DB_PASSWORD );
 
   desc "Make symlink for database config file"
   task :symlink do
-    #run "#{try_sudo} ln -nfs #{shared_path}/config/database.php #{release_path}/config/database.php"
+    run "#{try_sudo} ln -nfs #{shared_path}/config/database.php #{release_path}/config/database.php"
   end
 
 end
