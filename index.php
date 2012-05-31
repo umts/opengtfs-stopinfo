@@ -74,7 +74,7 @@ function getNextBuses($stopID)
         exit(1);
     }
 
-    if (!mysql_select_db('gtfs_development', $dbConnection)) {
+    if (!mysql_select_db(DB_NAME, $dbConnection)) {
         echo 'System unavailable.';
         exit;
     }
@@ -218,7 +218,7 @@ function getStop($stopID)
         exit(1);
     }
 
-    if (!mysql_select_db('gtfs_development', $dbConnection)) {
+    if (!mysql_select_db(DB_NAME, $dbConnection)) {
         echo "System unavailable.";
         exit;
     }
@@ -248,14 +248,14 @@ function getStop($stopID)
 
 function logRequest($stopID, $ip, $browser)
 {
-    $dbConnection = mysql_connect(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD);
+    $dbConnection = mysql_connect(LOG_DB_HOSTNAME, LOG_DB_USERNAME, LOG_DB_PASSWORD);
 
     if(!$dbConnection)
     {
         exit(1);
     }
 
-    if (!mysql_select_db('qr_log', $dbConnection))
+    if (!mysql_select_db(LOG_DB_NAME, $dbConnection))
     {
         print '';
         //echo 'Could not select database';

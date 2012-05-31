@@ -1,7 +1,7 @@
 <?php
 //This is the connection information for the opengtfs database.  Copy this
 //file to config/database.php and fill in the information
-define( 'DB_NAME',     'opengtfs_production' );
+define( 'DB_NAME',     'gtfs_production' );
 define( 'DB_HOSTNAME', 'www.example.com'     );
 define( 'DB_USERNAME', 'username'            );
 define( 'DB_PASSWORD', 'password'            );
