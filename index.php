@@ -3,10 +3,6 @@ ob_start();
 include './config/database.php';
 ob_end_clean();
 
-ini_set('display_errors', 0);
-ini_set('error_log', 'errorlog.txt');
-
-
 //print "System unavailable"; exit(1);
 
 if(!isset($_REQUEST['stop']) || is_int($_REQUEST['stop']))
@@ -16,7 +12,6 @@ if(!isset($_REQUEST['stop']) || is_int($_REQUEST['stop']))
 }
 
 $stopId = $_REQUEST['stop'];
-
 
 $stop = getStop($stopId);
 
