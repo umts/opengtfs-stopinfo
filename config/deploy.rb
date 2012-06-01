@@ -50,7 +50,7 @@ namespace :dbconfig do
   task :default do
     db_config = ERB.new <<-EOF
 <?php
-define( 'DB_NAME', 'gtfs_production' );
+define( 'DB_NAME', 'opengtfs_production' );
 define( 'DB_HOSTNAME', '#{db_host}' );
 define( 'DB_USERNAME', '#{db_user}' );
 define( 'DB_PASSWORD', '#{db_password}' );
