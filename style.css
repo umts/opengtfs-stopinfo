@@ -1,0 +1,19 @@
+table {
+  border-collapse: collapse;
+}
+
+tr.even {
+  background-color: white;
+}
+
+tr.odd {
+background-color: #EFEFEF;
+}
+
+td.routeNumber {
+  font-weight: bold;
+}
+
+.stopName {
+  font-weight: bold;
+}

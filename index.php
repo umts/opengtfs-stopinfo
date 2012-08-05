@@ -48,7 +48,7 @@ function nextBusesToTable($nextBuses, $stopName)
         {
             $result .= "\t<tr class=\"" . ($even ? 'even' : 'odd') . "\">\n";
             $result .= "\t\t<td class=\"departuretime\">" . trim(strftime('%l:%M%P', strtotime($currentBus['departure_date_time']))) . "</td>\n";
-            $result .= "\t\t<td class=\"routeNumber\">" . $currentBus['short_name'] . "</td>\n";
+            $result .= "\t\t<td class=\"routeNumber route-" . $currentBus['short_name'] . "\">" . $currentBus['short_name'] . "</td>\n";
             $result .= "\t\t<td class=\"headsign\">" . $currentBus['headsign'] . "</td>\n";
             $result .="\t</tr>\n";
             $even = !$even;
@@ -280,18 +280,13 @@ function logRequest($stopID, $ip, $browser)
 }
 
 ?>
-
+<!doctype html>
 <html>
   <head>
-  <title>PVTA - Next Scheduled Buses - <?= $stopName?></title>
-  <style>
-    table {border-collapse: collapse;};
-    table tr.even {background-color: white;}
-    table tr.odd {background-color: #EFEFEF;}
-    table td.routeNumber {}
-    .stopName {font-weight: bold;}
-
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>PVTA - Next Scheduled Buses - <?= $stopName?></title>
   </head>
   <body>
 <?= nextBusesToTable($nextBuses, $stopName)?>
