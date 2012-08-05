@@ -10,8 +10,91 @@ tr.odd {
 background-color: #EFEFEF;
 }
 
+td {
+  padding: 0 5px;
+}
+
 td.routeNumber {
   font-weight: bold;
+}
+
+/*Green Routes*/
+td.route-G1,
+td.route-G2,
+td.route-G3,
+td.route-G5,
+td.route-32,
+td.route-45,
+td.route-46,
+td.route-WS{
+  color: #090;
+}
+
+/*Blue Routes*/
+td.route-B4,
+td.route-B6,
+td.route-B7,
+td.route-B12,
+td.route-B13,
+td.route-B15,
+td.route-B23,
+td.route-34,
+td.route-35,
+td.route-B43,
+td.route-B48,
+td.route-BtrS,
+td.route-PV{
+  color: #009;
+}
+
+/*Red Routes*/
+td.route-R10,
+td.route-R14,
+td.route-R22,
+td.route-R24,
+td.route-R25,
+td.route-R27,
+td.route-R29,
+td.route-R41,
+td.route-R42,
+td.route-R44{
+  color: #900;
+}
+
+/*Purple Routes*/
+td.route-P11,
+td.route-P20,
+td.route-P21{
+  color: #909;
+}
+
+/*Gold 30*/
+td.route-30{
+  color: #FC0;
+}
+
+/*Pink 31*/
+td.route-31{
+  color: #C69;
+}
+
+/*Orange Routes*/
+td.route-38,
+td.route-39,
+td.route-39E{
+  color: #F60;
+}
+
+/*Maroon*/
+td.route-M40,
+td.route-NE{
+  color: #D22;
+}
+
+/*Light Blue Routes*/
+td.route-37,
+td.route-OWL{
+  color: #00F;
 }
 
 .stopName {
