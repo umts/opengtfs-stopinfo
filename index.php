@@ -218,7 +218,7 @@ function getStop($stopID)
         exit;
     }
 
-    $sql = "SELECT * FROM stops WHERE gtfs_id = " . $stopID . " LIMIT 1";
+    $sql = "SELECT * FROM stops WHERE gtfs_id = " . mysql_real_escape_string($stopID) . " LIMIT 1";
 
 
     $result = mysql_query($sql, $dbConnection);
