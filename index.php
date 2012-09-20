@@ -5,7 +5,7 @@ ob_end_clean();
 
 //print "System unavailable"; exit(1);
 
-if(!isset($_REQUEST['stop']) || is_int($_REQUEST['stop']))
+if(!(isset($_REQUEST['stop']) && ( is_int($_REQUEST['stop']) || ctype_digit($_REQUEST['stop']) )))
 {
     print "Unknown bus stop.";
     exit(1);
