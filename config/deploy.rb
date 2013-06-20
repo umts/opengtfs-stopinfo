@@ -70,4 +70,3 @@ define( 'LOG_DB_PASSWORD', DB_PASSWORD );
   end
 
 end
-# vim: set filetype=ruby :
